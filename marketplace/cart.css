@@ -1,0 +1,142 @@
+/* import local footer1 css*/ /*css overlapping*/
+/*	@import "footer1/css/ionicons.min.css";
+	@import "footer1/css/style.css";*/
+
+/* importing google fonts css*/
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:wght@700&family=Poppins:wght@600&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@600&family=Staatliches&family=Ubuntu&display=swap');
+
+* {
+  	box-sizing: border-box;
+}
+
+body{
+/*	overflow-x: hidden;*/
+
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+  z-index: 1000;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+  z-index: 1000;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #262F3D;
+  z-index: 1000;
+ /* border-radius: 5rem;*/
+}
+
+html, body{
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 4rem;
+	font-family: "Poppins";
+	font-size: 15px;
+	line-height: 2;	
+	box-sizing: border-box;
+	margin: 0;
+	top: 0;
+	left: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+/* header footer*/
+
+#header{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: auto;
+   z-index: 1000;
+}
+
+#footer {
+   position: static;
+   bottom: 0;
+   width: 100%;
+   height: auto;   
+}
+
+
+/*cart*/
+.background {
+	background: #eee;
+
+}
+.qty {
+	width: 10px;
+	margin: 10px;
+}
+
+
+.detail-con {
+	background-color: #313131;
+	text-align: center;
+	/*padding-top: 10%;*/
+}
+
+.line {
+	background-color: #ffbb33;
+}
+
+a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+a{
+  box-shadow: none !important
+}
+
+
+/* navigation bar*/
+
+
+
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+
+@media (max-width: 900px) {
+.item-name h5{
+	/*max-width: 10ch;*/
+	/*font-size: 16px;*/
+}
+}

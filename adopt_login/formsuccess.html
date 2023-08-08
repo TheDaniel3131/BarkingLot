@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="formsuccess.css">-->
+    <title>Pet Appointment Form Submitted Successfully Page| Barking Lot</title>
+</head>
+
+<body>
+	<div class="background" style= "display: flex; align-items: center; justify-content: center; background-size: auto !important;">
+	<h1>You have submitted successfully!</h1>
+	</div>
+	<br>
+	<div class="part-five part-four" id="Get-Started" style="display: flex; align-items: center; justify-content: center; background-size: auto !important;">
+    <p>Thank you for saving a life by adopting. We will get back to you shortly. Please click <a href="../lmsPHP/leave.php" style="text-decoration: none; color: #FF0000 !important;">here </a> if you are not redirected within a few seconds.</p>
+	</div>
+	<br>
+    <div style="display:block; margin-left:auto; margin-right: auto;">
+        <img src="img/pet10.jpg" alt="Pet" style="width:100%;">
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        setTimeout(function () {
+            window.location.replace("../lmsPHP/leave.php"); //will redirect to main page (index.html)
+        }, 5000); //will call the function after 3 secs.
+    </script>   
+</body>
+</html>

@@ -1,0 +1,117 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(219, 251, 255);
+	/*height: 100vh;*/
+	margin-left: -70px;
+}
+
+.row {
+	background: rgb(248, 255, 255);
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2), 2px 4px 10px 2px rgba(0, 0, 0, 0.39);
+	/*height: 90vh;*/
+	margin-top: 80px;
+	padding-right: -25px;
+}
+
+
+.row img {
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	height: 80vh;
+	object-fit: cover;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*form i{
+	padding-top: -20px;
+  margin-left: -30px;
+  cursor: pointer;
+}*/
+
+/*form small {
+	margin-top: -13px;
+}*/
+
+
+form .btn {
+	margin-top: 10px;
+	border: none;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	background-color: rgb(219, 251, 255);
+	color: black;
+	letter-spacing: 1px;
+	border-radius: 4px;
+	font-weight: bold;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.10);
+}
+
+form .btn:hover {
+	cursor: pointer;
+	background: rgb(145, 241, 255);
+	border: 1px solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+.btnback{
+	margin-top: 10px;
+	border: none;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	background-color: rgb(219, 251, 255);
+	color: black;
+	letter-spacing: 1px;
+	border-radius: 4px;
+	font-weight: bold;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.10);
+}
+.btnback:hover{
+	cursor: pointer;
+	background: rgb(145, 241, 255);
+	border: 1px solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+form .login-here {
+	margin-top: 10px;
+}
+
+/*.mx-n1 {
+  margin-top: -0.25rem !important;
+}*/
+
+
+@media (max-width: 990px){
+	.row img {
+		border-top-right-radius: 40px;
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	.row {
+	border-top-right-radius: 40px;
+}
+}

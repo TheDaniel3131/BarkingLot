@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+html, body {
+	background-color: #FFFFFF;
+	font-family: 'Varela Round', sans-serif;
+}
+
+/* header styling */
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+#title {
+	color: #120901;
+	font-size: 4.42em;
+	padding: 1px 55px;
+	font-family: 'Underdog', cursive;
+	text-shadow: 4px 2px 5px #ffa366,
+	0px 1px 2px #120901;
+
+}
+
+#top-pic {
+	display: block;
+	margin-left: auto;
+	justify-content: flex-end;
+	min-width: 50%;
+	max-width: 70%;
+
+}
+
+/* main styling */
+
+#survey-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	opacity: 0.9;
+	color: #120901;
+	font-size: 1.2em;
+	margin: 0px 50px;
+	border: 2px solid #120901;
+	border-radius: 5px;
+	background-color: #ffa366;
+	box-shadow: 5px 5px 5px #120901;
+}
+
+#description {
+	font-size: 1.1em;
+	text-align: center;
+}
+
+form, #todays-date > select, input, textarea, #dropdown {
+	padding: 5px;
+	margin-left: 5px;
+	font-size: 18px;
+}
+
+.main-label {
+	display: flex;
+	justify-content: stretch;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding: 5px;
+}
+
+form > div {
+
+	padding: 5px;
+	margin: 1px 5% 15px 5%;
+}
+
+ul {
+	padding-left: 0px;
+}
+
+li{
+	padding: 2px 2px 2px 5px;
+	display: inline-block;
+	list-style: none;
+}
+
+input {
+	margin: 5px;
+}
+
+#email-phone > input, #dogName > input, #first-last-name > input, #address > input {
+	width: 90%;
+}
+#gender {
+	display: flex;
+	justify-content: stretch;
+}
+
+#housing {
+	display: flex;
+	flex-direction: column;
+}
+
+#housing > select {
+	margin: 15px;
+	width: 90%;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+}
+
+#button {
+	display: flex;
+	justify-content: center;
+}
+
+#submit {
+	color: #120901;
+	background: #ffa366;
+	border: 2.5px solid #120901;
+	border-radius: 15px;
+	cursor: pointer;
+	margin: 10px;
+	font-size: 2.02em;
+	font-weight: bold;
+	padding: 22px;
+}
+
+#submit:hover {
+	background: #FFFFFF;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+/* above footer styling */
+
+#above-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 50px;
+}
+
+#bottom-pic {
+	display: block;
+	margin-left: auto;
+	max-width: 70%;
+}
+
+/* footer */
+
+#coded-by {
+	flex: 1;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 1em;
+	padding: 5px;
+	text-align: center;
+}
+
+a {
+	color: #fd6907;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #ffa366;
+	animation-duration: 0.5s;
+}
+
+/* footer */
+
+footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	width: 100%;
+	padding: 15px;
+}
+
+#copyright {
+	color: #120901;
+	font-size: 15px;
+}
+
+.fab {
+	opacity: 0.9;
+	font-size: 15px;
+	color: #120901;
+}
+
+.footer-social .fab:hover {
+	color: #fd6907;
+	-webkit-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	-ms-transition-duration: 0.6s;
+	-o-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+}
+
+.list-inline {
+	flex-direction: row;
+	justify-coflexntent: center;
+
+}
+
+.list-inline-item {
+	padding: 0 10px;
+}
+
+@media (min-width: 760px) and (min-device-width: 760px) {
+	header {
+		flex-direction: row;
+		align-items: flex-end;
+	}
+
+	#title {
+		font-size: 6.42em;
+	}
+
+	#email-phone > input, #dogName > input, #first-last-name > input, #address > input {
+		width: auto;
+	}
+
+	.main-label {
+		display: inline-block;
+	}
+
+	#copyright {
+		font-size: 20px;
+	}
+
+	.fab {
+		font-size: 25px;
+	}
+  
+  #housing > select {
+	width: 300px;
+}
+}

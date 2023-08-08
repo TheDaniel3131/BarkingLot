@@ -1,0 +1,96 @@
+
+
+*{
+	overflow-y: hidden;
+}
+}
+
+
+body{
+}
+
+
+
+
+
+
+
+.tnc {
+	text-align: center;
+}
+
+
+.container-invoice {
+	margin: 20px 20% 20px 20%;
+	background-color: white;
+}
+
+.print{
+	display: inline-block;
+	color: gray;
+	margin: 10px;
+	background-color: whitesmoke;
+	border-radius: 8px;
+	border: 2px solid #9b9ba4;
+	float: right;
+	font-size: 13px;
+	
+}
+
+.print .button{
+	margin: 6px;
+	/*border-radius: 20px;*/
+}
+
+.print:hover{
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+
+.container-invoice .brand-name {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.customer-dtl {
+	margin-top: 25px;
+}
+.row {
+	margin-top: 10px;
+}
+
+.cus-name {
+	color: #84B0CA;
+}
+
+.bank-name {
+	margin-top: 50px;
+}
+
+/*Checkout form*/
+p .copyright {
+	text-decoration: none;
+}
+
+.ship-detail {
+	margin-top: 55px;
+}
+
+hr {
+	color: whitesmoke;
+}
+
+@media (max-width: 1000px) {
+	.container-invoice {
+		margin: 20px 10% 20px 10%;
+	}
+	.bank-name {
+		margin-top: 20px;
+	}
+	.pay-detail {
+		margin-top: 30px;
+}
+}

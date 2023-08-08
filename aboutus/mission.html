@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link rel="icon" href="../tabicon/icon.webp">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Our Mission | Barking Lot</title>
+	<!-- Local CSS -->
+	<link rel="stylesheet" href="mission.css">
+	<!-- Bootstrap | CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<!-- Font Awesome | CSS -->
+<!-- 	<link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+	<script src="https://kit.fontawesome.com/5a3777daa8.js" crossorigin="anonymous"></script>
+
+
+	<!-- External CSS-->
+	<link rel="stylesheet" href="../footer.css">
+
+	
+	<!-- Local Internal CSS -->
+	<style>
+
+		/* importing google fonts css*/
+		@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:wght@700&family=Poppins:wght@600&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@600&family=Staatliches&family=Ubuntu&display=swap');
+
+		/*preloader*/
+
+		#preloader{
+			background: #fff url('../load/about_trans.gif') no-repeat center center;
+			background-size: 5%;
+
+			height: 100%;
+			width: 100%;
+
+			top: 0;
+			left: 0;
+
+			position: fixed;
+	       	display: -webkit-box;
+	      	display: -ms-flexbox;
+	     	display: flex;
+
+/*
+	      -webkit-box-pack: center;
+	          -ms-flex-pack: center;
+	              justify-content: center;
+	      -webkit-box-align: center;
+	          -ms-flex-align: center;
+	              align-items: center;*/
+
+			z-index: 999999;
+			overflow: hidden;
+			overflow-y: hidden /* Hide vertical scrollbar */
+		}
+
+		.background-1{
+			/* Blurred background image */
+			/*	background-image: url('https://images.pexels.com/photos/1124002/pexels-photo-1124002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;*/
+	 		/* Add the blur effect */
+/*  		filter: blur(510px);*/
+  			/*-webkit-filter: blur(50px);*/
+/* 			backdrop-filter: blur(50px);*/
+		}
+		h1{
+			text-align: center;
+			margin-left: -105px;
+		}
+
+		* {
+			box-sizing: border-box;
+
+		}
+
+		body{
+			overflow-y: scroll;
+		}
+		
+		html, body{
+
+			font-family: "Poppins";
+			font-size: 15px;
+			line-height: 2;	
+			box-sizing: border-box;
+			margin: 0;
+			top: 0;
+			left: 0;
+		}
+
+		html, body .bk{
+		/*In case if blurred background-1 is not working, use original*/
+			background-image: url('../img/pet15.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		
+			/*Locked Image And Scaling*/
+			display: block;
+			/*max-width: 100%;
+			max-height: 100%;*/
+			width: auto;
+			height: 35.5vh;
+		}
+
+		html::-webkit-scrollbar {
+		  width: 1rem;
+		  z-index: 1000;
+		}
+
+		html::-webkit-scrollbar-track {
+		  background: transparent;
+		  z-index: 1000;
+		}
+
+		html::-webkit-scrollbar-thumb {
+		  background: #262F3D;
+		  z-index: 1000;
+		 /* border-radius: 5rem;*/
+		}
+
+		.navbar {
+			display: flex;
+		/*	overflow-y: scroll;*/
+		
+		}
+
+		.navbar .navbar-brand a{
+		
+		}
+		
+		.navbar-brand {
+		
+			margin-left: 15px;
+			font-size: 23.5px;
+			
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link{
+			margin-left: 1.2px;
+			padding: 1.5rem 1.4rem;
+			font-size: 1.3rem;
+			position: relative;
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link:hover{
+			border-bottom: 5px solid #D3D3D3;
+			margin-top: -1px;
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link:active{
+			border-top: 4px solid #808080;
+			color: #D1D1D1;
+		
+		}
+
+		.navbar-nav button{
+		
+			osition: relative;
+			isplay:inline-block;
+			adding: 1rem 1.2rem;
+		
+		}
+		
+		.navbar-nav .btn{
+		
+			background-color: yellow;
+			color: none;
+			border-radius: 25px;
+			padding: 0.85rem 1.25rem;
+			font-size: 1.2rem;
+			text-align:center;
+			justify-content: center;
+		
+		}
+
+		.navbar-nav .btn:hover{
+			background-color: lightgreen;
+		}
+		
+		.navbar-nav a {
+			text-decoration: none;
+			font-weight: 500;
+		}
+		
+		.navbar-nav a:hover {
+		
+		}
+		
+		.navbar-links ul {
+			list-style-type: none;
+		
+		}
+		
+		.navbar-links li {
+			list-style-type: none;
+			text-align: center;
+		}
+		
+		.navbar-links li:hover{
+		    transition: top 0.3s;
+			background-color: #313131;		
+		}
+
+		.navbar-links li a{
+			text-decoration: none;
+			padding: 1rem 1rem;
+			display: block;
+		}
+		
+		.navbar-links li a:hover{
+			color: white;
+			background-color: #313131;			
+		}
+		
+		.wtbl .h1{
+			position: relative;
+			text-align: center;
+			font-size: 70px;
+/*			margin-top: 50vh;*/
+			color: 	whitesmoke;
+			padding-top: 5px;
+		}
+		
+		h1{
+			margin-top: -150px;
+		}
+		.container-mission{
+			text-align: justify;
+			margin-top: 8%;
+			margin-left: 12%;
+			margin-right: 12%;
+			padding-bottom: 10%;
+		}
+
+		.container-mission .line-h1{
+			line-height: 1.5;
+			margin-bottom: 85px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 42px;
+
+		}
+
+		.container-mission .line-h2{
+			line-height: 1.5;
+			margin-bottom: 40px;
+		}
+
+		p{
+/*			font-family: Sans-serif;
+			font-size: 18px;*/
+/*			line-height: 1.5;*/
+		}
+
+		.btn {
+			right: 0;
+		}
+
+
+		/*		THE FOOOTER*/
+		.footer-dark {
+		  padding: 50px 0;
+		  color: #f0f9ff;
+		  background-color: #212529;
+		}
+
+		.footer-dark h3 {
+		  margin-top: 0;
+		  margin-bottom: 12px;
+		  font-weight: bold;
+		  font-size: 16px;
+		}
+
+		.footer-dark ul {
+		  padding: 0;
+		  list-style: none;
+		  line-height: 2.65;
+		  font-size: 14px;
+		  margin-bottom: 0;
+		}
+
+		.footer-dark ul a {
+		  color: inherit;
+		  text-decoration: none;
+		  opacity: 0.6;
+		}
+
+		.footer-dark ul a:hover {
+		  opacity: 0.8;
+		}
+		
+		
+		@media screen and (min-width: 500px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+			.wtb1 .h1 {
+				font-size: 30px;
+				/*margin-right: 0%;*/
+			}
+
+
+		@media screen and (mix-width: 525px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+		}
+		
+		@media screen and (min-width: 570px){
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+		}
+		
+		@media screen and (min-width: 600px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+		}
+
+
+		@media (max-width:767px) {
+		  .footer-dark .item:not(.social) {
+		    text-align: center;
+		    padding-bottom: 20px;
+
+		  }
+		}
+
+		.footer-dark .item.text {
+		  margin-bottom: 36px;
+		}
+
+		@media (max-width:767px) {
+		  .footer-dark .item.text {
+		    margin-bottom: 0;
+		  }
+		}
+
+		.footer-dark .item.text p {
+		  opacity: 0.6;
+		  margin-bottom: 0;
+		}
+
+		.footer-dark .item.social {
+		  text-align: center;
+		  margin-top: 35px;
+		}
+
+
+
+		@media screen and (min-width: 800px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+			
+			}
+		}
+		
+		@media (max-width:991px) {
+		  .footer-dark .item.social {
+		    text-align: center;
+		    margin-top: 20px;
+		  }
+		}
+
+		.footer-dark .item.social > a {
+		  font-size: 20px;
+		  width: 36px;
+		  height: 36px;
+		  line-height: 36px;
+		  display: inline-block;
+		  text-align: center;
+		  border-radius: 50%;
+		  box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+		  margin: 0 8px;
+		  color:#fff;
+		  opacity: 0.75;
+		}
+
+		.footer-dark .item.social > a:hover {
+		  opacity: 0.9;
+		}
+
+		.footer-dark .copyright {
+		  text-align: center;
+		  padding-top: 24px;
+		  opacity: 0.3;
+		  font-size: 13px;
+		  margin-bottom: 0;
+		}
+
+		.col-md-6{
+			padding: 50 0 50 0;
+		}
+
+
+		@media screen and (min-width: 990px){
+			.navbar-links li {
+				display: show;
+			}		
+		
+			.navbar-nav button {
+				display: none;
+			}		
+		
+			.navbar-nav .btn{
+				display: none;
+		
+			}
+		}
+
+		@media screen and (min-width: 1070px){
+			.navbar-links li {
+				display: show;
+			}		
+		
+			.navbar-nav button {
+				
+			}		
+		
+			.navbar-nav .btn{
+		
+			}
+		
+			.wtbl{
+				margin-top: 220px;
+		
+			}
+		}
+		
+		@media screen and (min-width: 1224){
+		
+			.navbar-nav button{
+		
+				position: absolute;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+				margin-top: -27px;
+			
+		
+			}
+
+			.navbar-links li {
+				display: show;
+			}		
+		
+		
+			.navbar-nav .btn{
+				display: block;
+		
+			}
+		
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+		
+		@media screen and (min-width: 1226px){
+		
+			.navbar-nav button{
+		
+				position: absolute;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+				margin-top: -27px;
+		
+
+			}
+		
+			.navbar-links li {
+				display: show;
+			}		
+		
+		
+			.navbar-nav .btn{
+				display: block;
+		
+			}
+		
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+		
+		@media screen and (min-width: 1250px){
+		
+			.navbar-links li {
+				display: show;
+			}		
+		
+			.navbar-nav button {
+		
+			}		
+		
+			.navbar-nav .btn{
+				display: block;
+		
+			}
+
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+		
+		@media screen and (min-width: 1350px){
+			
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+			h4{
+				margin-top: 30px;
+				margin-bottom: 12px;
+			}
+			p{
+			}
+	}
+	</style>
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader"></div>
+	<!-- Navigation Top Bar In Header-->
+	<header class="header" id="header">
+		<!-- Navigation Bar Content -->
+		<nav class="navbar navbar-expand-lg header-nav fixed-top navbar-dark bg-dark">
+			<div class="container-fluid">
+			  <a class="navbar-brand navbar-nav ml-auto" href="	">Barking Lot</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			    <span></span>
+			    <span></span>
+			    <span></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse justify-content-between navbar-links" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="../index.html">Home <span class="sr-only"></span></a>
+			      </li>
+			      <li class="nav-item active">
+			        <a class="nav-link" href="../adopt.html">Adopt</a>
+			      </li>
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="slm.html">Saving Lifes Matter</a>
+			          <a class="dropdown-item" href="mission.html">Our Mission</a>
+			          <a class="dropdown-item" href="ourteam.html">Our Team</a>
+			          <a class="dropdown-item" href="refund.html">Refund Policy</a>
+			          <a class="dropdown-item" href="ToS.html">Terms of Services</a>
+			          <a class="dropdown-item" href="privacy.html">Privacy</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="#">Coming Soon!</a>
+			        </div>
+			      </li>
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../services/marketplace.php">Marketplace</a>
+			          <a class="dropdown-item" href="../services/contactus.php">Contact Us</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="#">Coming Soon!</a>
+			        </div>
+			      </li>
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../eventmanagementsystem/index.php?page=venue" target="_blank">Events & Promotions</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item disabled" href="#"><u>Coming Soon!</u></a>
+			          <a class="dropdown-item disabled" href="./funds.html">Funds</a>
+			          <a class="dropdown-item disabled" href="./funds.html">Volunteer</a>
+			          <a class="dropdown-item disabled" href="./funds.html">Surrender</a>
+			        </div>		
+			      <li class="nav-item">
+			        <a class="nav-link" href="../registerlogin/login.php">Login</a>
+			      </li>
+			    </ul>
+				 <ul class="navbar-nav nav-item ml-auto mb-2 mb-lg-0">
+				   <a href="../donation/Donation%20Page.html" class="btn" style="text-align: center;">Donate Now!</button></a>
+				 </ul>
+			  </div>
+			</div>
+		</nav>
+	</head>
+
+	<section class="bk">
+		<div class="wtbl">
+			<h1 class="h1">Our Mission</h1>
+		</div>
+	</section>
+
+	<section class="container-mission">
+		<h2 class="line-h1">Our BARKING LOT Mission is Clear:</h2>
+		<h4 class="line-h2">To save the most vulnerable dogs, give them a second chance, and enrich the lives of dogs and humans.</h4>
+		<p>This simple statement is our barking lot zone, guiding every initiative to ensure we have the greatest impact on people's protection of dogs. <br><br> In carrying out this mission, we continually return to our core values of innovation, advocacy, opportunity, compassion, and excellence. These are not just words for us, but reminders. If we are to continue to change the future of animal welfare, we must innovate and find creative solutions. We must regularly do online and offline outreach activities. We must give dogs a second chance. We must have compassion because that is the foundation of a better world. We must always strive for excellence because our pets and our communities deserve our best.</p>
+		
+	</section>
+
+	<!--preloader time duration adjustment-->
+	<iframe width="0" height="0" src="https://www.youtube.com/embed/H8vh29F1Ozs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="0" height="0" src="https://www.youtube.com/embed/H8vh29F1Ozs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+
+    <!--preloader javascript-->
+	<script>
+		//preloader javascript
+		var loader = document.getElementById("preloader");
+
+		window.addEventListener("load",function(){
+			loader.style.display="none";
+
+		})
+	</script>
+
+		<!--Section X: Footer -->
+	<footer>
+    	<div class="footer-dark" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Pet Adoption</a></li>
+                            <li><a href="#">Funds</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="registerlogin/login.php">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About Us</h3>
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Saving Lives Matter</a></li>
+                        </ul>
+                    </div>
+
+                    <br>
+                    <div class="col-md-6 item text" id="upspacing_footeritems">
+                        <h3>Barking Lot</h3>
+                        <p style="font-family: Poppins;">The reason of our company creation is to create an easy, simple, and effective pet adoption website where everyone can use our website because it is user-friendly.</p>
+                    </div>
+                    <br/>
+
+                    <br><br/>
+         			<br>
+                    <div class="col item social" id="upspacing_footeritems">
+                    	<a href="https://www.facebook.com/Barking-Lot-104626392346342"><i class="fa fa-facebook whiteico" aria-hidden="true"></i></a>
+                    	<a href="https://www.reddit.com/user/BarkingLotOfficial"><i class="fa fa-reddit" id="whiteico" aria-hidden="true"></i></a>
+                    	<a href="https://twitter.com/lot_barking"><i class="fa fa-twitter whiteico" aria-hidden="true"></i></a>
+                    	<a href="https://www.youtube.com/channel/UCkPsTuZBu7MXRgnNWq5EEyA"><i class="fa fa-youtube whiteico" aria-hidden="true"></i></a>
+                    	<a href="https://www.linkedin.com/in/barking-lot-a78213247/"><i class="fa fa-linkedin whiteico" aria-hidden="true"></i></a>
+                    </div>
+                   <br/>
+                </div>
+                <p class="copyright">Barking Lot © 2022</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+	<!-- jQuery | JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- Bootstrap | JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Lonicons | Icons | JS -->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<!-- Popper | Dropdowns, Popovers, or Tooltips | JS -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mP	X5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html>

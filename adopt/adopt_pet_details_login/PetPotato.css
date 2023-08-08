@@ -1,0 +1,156 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+
+body {
+	background-image: url('../../img/bgreglog.png');
+	background-attachment: cover;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+/*	background: rgb(219, 251, 255);*/
+/*	background: url("../../img/pet1.jpg");*/
+	/*height: 100vh;*/
+/*	margin-left: -70px;*/
+}
+	
+.row {
+	background: rgb(248, 255, 255);
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2), 2px 4px 10px 2px rgba(0, 0, 0, 0.39);
+	/*height: 90vh;*/
+	margin-top: 80px;
+	padding-right: -25px;
+}
+
+
+.img-fluid{
+	object-fit: cover;
+}
+.row img {
+
+	border-top-left-radius: 40px;
+	border-bottom-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	height: 75vh;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*form i{
+	padding-top: -20px;
+  margin-left: -30px;
+  cursor: pointer;
+}*/
+
+/*form small {
+	margin-top: -13px;
+}*/
+
+.descP{
+/*    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;*/
+
+    font-family: "Poppins";
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+form{
+	font-family: "Poppins";
+
+
+}
+
+
+form .btn {
+	margin-top: 10px;
+	padding: 15px 0px 15px 0px;
+	border: none;
+	outline: none;
+	height: 40px;
+	width: 360px;
+	left: 150px;
+
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(219, 251, 255);
+	color: black;
+	letter-spacing: 1px;
+	border-radius: 60px;
+	font-weight: bold;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.10);
+}
+
+form .btn:hover {
+	cursor: pointer;
+	background: rgb(146, 190, 205);
+	border: 2px solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+.btnback{
+	margin-top: 10px;
+	border: none;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	background-color: rgb(219, 251, 255);
+	color: black;
+	letter-spacing: 1px;
+	border-radius: 4px;
+	font-weight: bold;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.10);
+}
+.btnback:hover{
+	cursor: pointer;
+	background: rgb(145, 241, 255);
+	border: 1px solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+form .login-here {
+	margin-top: 10px;
+}
+
+/*.mx-n1 {
+  margin-top: -0.25rem !important;
+}*/
+
+.btn{
+	display: flex;
+}
+
+@media (max-width: 990px){
+	.row img {
+		border-top-right-radius: 40px;
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	.row {
+	border-top-right-radius: 40px;
+}
+}

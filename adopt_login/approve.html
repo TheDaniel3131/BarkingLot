@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+<script type="text/javascript" src="https://github.com/rubyeffect/easy_fill/tree/master/lib/easy_fill-0.0.1.min.js"></script>
+  <title>Approve or Reject</title>
+  <link rel="stylesheet" type="text/css" href="#" />
+</head>
+
+<body>
+	<form name="form1" method="GET" action="" onSubmit="return verify()">
+    <div>
+        <button class="bt" action="aprove">Approved</button> // Reply with approval form as attachment
+        <button class="bt" action="reject">Rejected</button> // Reply 'Rejected'
+    </div>
+</form>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+$(".bt").click(function(event) {
+
+    var action = $(this).attr("action");
+
+    $.ajax({
+        url: '/path/to/fileEmail.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {action: 'action'},
+    })
+    .done(function() {
+        console.log("success");
+    })
+    .fail(function() {
+        console.log("error");
+    });
+
+});
+});
+
+
+</body>
+
+</html>

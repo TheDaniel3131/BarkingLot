@@ -1,0 +1,460 @@
+		/* importing google fonts css*/
+		@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:wght@700&family=Poppins:wght@600&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@600&family=Staatliches&family=Ubuntu&display=swap');
+
+		.background-1{
+			/* Blurred background image */
+			/*	background-image: url('https://images.pexels.com/photos/1124002/pexels-photo-1124002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;*/
+	 		/* Add the blur effect */
+/*  		filter: blur(510px);*/
+  			/*-webkit-filter: blur(50px);*/
+/* 			backdrop-filter: blur(50px);*/
+}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body{
+			overflow-y: scroll;
+		}
+		
+		html, body{
+
+			font-family: "Poppins";
+			font-size: 15px;
+			line-height: 2;	
+			box-sizing: border-box;
+			margin: 0;
+			top: 0;
+			left: 0;
+
+			/*vertical scrollbar*/
+			/* overflow-x: hidden;*/
+			
+			/*Resizing Browser Window Size*/
+			/*min-width: 150px;
+			min-height: 150px;*/
+
+			/*In case if blurred background-1 is not working, use original*/
+			background-image: url('../img/pet27.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-position:center;
+
+			/*Locked Image And Scaling*/
+			display: block;
+		    max-width: 100%;
+		    max-height: 100%;
+		    width: auto;
+		    height: auto;
+		}
+
+		html::-webkit-scrollbar {
+		  width: 1rem;
+		  z-index: 1000;
+		}
+
+		html::-webkit-scrollbar-track {
+		  background: transparent;
+		  z-index: 1000;
+		}
+
+		html::-webkit-scrollbar-thumb {
+		  background: #262F3D;
+		  z-index: 1000;
+		 /* border-radius: 5rem;*/
+		}
+			
+		.navbar {
+			display: flex;
+			position: absolute;
+		/*	overflow-y: scroll;*/
+
+		}
+
+		.navbar .navbar-brand a{
+		
+		}
+		
+		.navbar-brand {
+		
+			margin-left: 15px;
+			font-size: 23.5px;
+			
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link{
+			margin-left: 1.2px;
+			padding: 1.5rem 1.4rem;
+			font-size: 1.3rem;
+			position: relative;
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link:hover{
+			border-bottom: 5px solid #D3D3D3;
+			margin-top: -1px;
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link:active{
+			border-top: 4px solid #808080;
+			color: #D1D1D1;
+		
+		}
+
+		.navbar-nav button{
+		
+			osition: relative;
+			isplay:inline-block;
+			adding: 1rem 1.2rem;
+		
+		}
+		
+		.navbar-nav .btn{
+		
+			background-color: yellow;
+			color: none;
+			border-radius: 25px;
+			padding: 0.85rem 1.25rem;
+			font-size: 1.2rem;
+			text-align:center;
+			justify-content: center;
+		
+		}
+
+		.navbar-nav .btn:hover{
+			background-color: lightgreen;
+		}
+		
+		.navbar-nav a {
+			text-decoration: none;
+			font-weight: 500;
+		}
+		
+		.navbar-nav a:hover {
+		
+		}
+		
+		.navbar-links ul {
+			list-style-type: none;
+		
+		}
+		
+		.navbar-links li {
+			list-style-type: none;
+			text-align: center;
+		}
+		
+		.navbar-links li:hover{
+		    transition: top 0.3s;
+			background-color: #313131;		
+		}
+
+		.navbar-links li a{
+			text-decoration: none;
+			padding: 1rem 1rem;
+			display: block;
+		}
+		
+		.navbar-links li a:hover{
+			color: white;
+			background-color: #313131;			
+		}
+
+		.container123{
+			padding: 150px;
+			justify-content: center;
+			display: flex;
+		}
+		
+		.container{
+			width: 100%;
+
+
+			align-items: center;
+			justify-content: center;
+		}
+
+		
+		form{
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			padding: 2vw 4vw;
+			width: 90%;
+			max-width: 600px;
+			border-radius: 50px;
+
+		}
+
+		form h3{
+			color: #555;
+			font-weight: 800;
+			margin-bottom: 2px;
+		}
+
+		form input, form textarea{
+			border: 0;
+			margin: 20px 0;
+			padding: 10px;
+			outline: none;
+			background: #f5f5f5;
+			font-size: 16px;
+		}
+
+		form input{
+			border-radius: 25px;
+			border: 2px solid black;
+		}
+
+		form textarea{
+			min-height: 150px;
+			height: 250px;
+			max-height: 400px;
+			border-radius: 25px;
+			border: 2px solid black;
+		}
+
+		form button{
+			padding: 15px;
+			background: #ff5361;
+			color: #fff;
+			font-size: 18px;
+			border: 0;
+			outline: none;
+			cursor: pointer;
+			width: 150px;
+			margin: 20px auto 0;
+			border-radius: 30px;
+
+		}
+
+		.wtbl .h1{
+			position: relative;
+			text-align: center;
+			font-size: 70px;
+			margin-top: 30vh;
+			color: 	whitesmoke;
+			padding-top: 45px;
+		}
+		
+		.container-mission{
+			text-align: justify;
+			margin-top: 8%;
+			margin-left: 12%;
+			margin-right: 12%;
+			padding-bottom: 10%;
+		}
+
+		.container-mission .line-h1{
+			line-height: 1.5;
+			margin-bottom: 80px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 42px;
+
+		}
+
+		.container-mission .line-h2{
+			line-height: 1.5;
+			margin-bottom: 30px;
+		}
+
+/*		p{
+			font-family: Sans-serif;
+			font-size: 18px;
+			line-height: 1.5;
+		}*/
+
+		.btn {
+			right: 0;
+		}
+		
+		
+		@media screen and (min-width: 500px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+			.wtb1 .h1 {
+				font-size: 30px;
+				/*margin-right: 0%;*/
+			}
+
+
+		@media screen and (mix-width: 525px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+		}
+		
+		@media screen and (min-width: 570px){
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+		}
+		
+		@media screen and (min-width: 600px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+		
+			}
+		}
+
+
+		@media screen and (min-width: 800px){
+		
+			.navbar-nav button{
+		
+				position: relative;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+			
+			}
+		}
+		
+		@media screen and (min-width: 990px){
+			.navbar-links li {
+				display: show;
+			}		
+		
+			.navbar-nav button {
+				display: none;
+			}		
+		
+			.navbar-nav .btn{
+				display: none;
+		
+			}
+		}
+
+		@media screen and (min-width: 1070px){
+			.navbar-links li {
+				display: show;
+			}		
+		
+			.navbar-nav button {
+				
+			}		
+		
+			.navbar-nav .btn{
+		
+			}
+		
+			.wtbl{
+				margin-top: 220px;
+		
+			}
+		}
+		
+		@media screen and (min-width: 1224){
+		
+			.navbar-nav button{
+		
+				position: absolute;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+				margin-top: -27px;
+			
+		
+			}
+
+			.navbar-links li {
+				display: show;
+			}		
+		
+		
+			.navbar-nav .btn{
+				display: block;
+		
+			}
+		
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+		
+		@media screen and (min-width: 1226px){
+		
+			.navbar-nav button{
+		
+				position: absolute;
+				display:inline-block;
+				padding: 1rem 1.2rem;
+				margin-top: -27px;
+		
+
+			}
+		
+			.navbar-links li {
+				display: show;
+			}		
+		
+		
+			.navbar-nav .btn{
+				display: block;
+		
+			}
+		
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+		
+		@media screen and (min-width: 1250px){
+		
+			.navbar-links li {
+				display: show;
+			}		
+		
+			.navbar-nav button {
+		
+			}		
+		
+			.navbar-nav .btn{
+				display: block;
+		
+			}
+
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+		
+		@media screen and (min-width: 1350px){
+			
+			.wtbl{
+				margin-top: 220px;
+				margin-left: 90px;
+				height: 400px;
+			}
+		}
+
+

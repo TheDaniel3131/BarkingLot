@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Adopt a Pet | Barking Lot</title>
+	<!-- Local CSS -->
+    <link href="stylesheet" href="barkinglotcss.css">
+	<!-- Bootstrap | CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!-- Font Awesome | CSS -->
+	<link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+	<!-- Local Internal CSS -->
+	<style>
+		/* importing google fonts css*/
+		@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:wght@700&family=Poppins:wght@600&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@600&family=Staatliches&family=Ubuntu&display=swap');
+
+		.background-1{
+			/* Blurred background image */
+			background-image: url('https://images.pexels.com/photos/1124002/pexels-photo-1124002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+			 /* Add the blur effect */
+/*  			filter: blur(510px);*/
+  			-webkit-filter: blur(50px);
+/* 			backdrop-filter: blur(50px);*/
+		}
+
+		* {
+  			box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            margin:0; padding:0;
+            box-sizing: border-box;
+            outline: none; border:none;
+            text-transform: capitalize;
+            transition: all .55s linear;
+
+        
+		}
+
+        /*preloader*/
+
+        #preloader{
+          background: #fff url('../load/circleload.gif') no-repeat center center;
+          background-size: 5%;
+
+          height: 100%;
+          width: 100%;
+
+          top: 0;
+          left: 0;
+
+          position: fixed;
+              display: -webkit-box;
+              display: -ms-flexbox;
+            display: flex;
+
+    /*
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;*/
+
+          z-index: 999999;
+          overflow: hidden;
+          overflow-y: hidden /* Hide vertical scrollbar */
+        } 
+
+		html{
+		
+		}
+
+		body{
+			overflow-y: scroll;
+               overflow-x: hidden;
+		}
+		body .album{
+			background-color: #4D9CEC;
+		}
+        html, body{
+
+    	font-family: "Poppins";
+		font-size: 15px;
+		line-height: 2;	
+		box-sizing: border-box;
+		margin: 0;
+		top: 0;
+		left: 0;
+
+        /*vertical scrollbar*/
+        /* overflow-x: hidden;*/
+
+        /*Resizing Browser Window Size*/
+        /*min-width: 150px;
+        min-height: 150px;*/
+
+        /*In case if blurred background-1 is not working, use original*/
+        background-image: url(./img/pet36.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+        /*Locked Image And Scaling*/
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        }
+
+        .html .body{
+            width: 100vw;
+            height: 100vh;
+        }
+
+
+        html::-webkit-scrollbar {
+          width: 1.2rem;
+          z-index: 1000;
+        }
+
+        html::-webkit-scrollbar-track {
+          background: transparent;
+          z-index: 1000;
+        }
+
+        html::-webkit-scrollbar-thumb {
+          background: #262F3D;
+          z-index: 1000;
+         /* border-radius: 5rem;*/
+        }
+
+		.navbar {
+			display: flex;
+/*			overflow-y: scroll;*/
+
+		}
+
+		.navbar .navbar-brand a{
+
+		}
+
+		.navbar-brand {
+
+			margin-left: 15px;
+			font-size: 23.5px;
+	
+		}
+
+		.navbar-toggler{
+
+		}
+
+		.navbar-toggler span{
+
+
+		}
+
+		.navbar-toggler span + span{
+
+			/* do not use this, for testing purpose*/
+/*			margin-top: 4px;
+			width: 18px;
+			margin-left: 4px;*/
+		}
+
+		.navbar-toggler span + span + span{
+
+			/* do not use this, for testing purpose*/
+/*			width: 10px;
+			margin-left: 10px;*/
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link{
+			margin-left: 1.2px;
+			padding: 1.5rem 1.4rem;
+			font-size: 1.3rem;
+			position: relative;
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link:hover{
+			border-bottom: 5px solid #D3D3D3;
+			margin-top: -1px;
+		}
+
+		.navbar-expand-lg .navbar-nav .nav-link:active{
+			border-top: 4px solid #808080;
+			color: #D1D1D1;
+
+		}
+
+		.navbar-nav button{
+
+			position: relative;
+			display:inline-block;
+			padding: 1rem 1.2rem;
+
+		}
+
+		.navbar-nav .btn{
+
+			background-color: yellow;
+			color: none;
+			border-radius: 25px;
+			padding: 0.85rem 1.25rem;
+			font-size: 1.2rem;
+			text-align:center;
+			justify-content: center;
+
+			}
+
+		.navbar-nav .btn:hover{
+			background-color: lightgreen;
+		}
+
+		.navbar-nav a {
+			text-decoration: none;
+			font-weight: 500;
+		}
+
+		.navbar-nav a:hover {
+
+		}
+
+		.navbar-links ul {
+			list-style-type: none;
+
+		}
+
+		.navbar-links li {
+			list-style-type: none;
+			text-align: center;
+		}
+
+		.navbar-links li:hover{
+       		transition: top 0.3s;
+			background-color: #313131;		
+		}
+
+		.navbar-links li a{
+			text-decoration: none;
+			padding: 1rem 1rem;
+			display: block;
+		}
+
+		.navbar-links li a:hover{
+			color: white;
+			background-color: #313131;			
+		}
+
+		.wtbl{
+			margin-top: 220px;
+			margin-left: 90px;
+			height: 400px;
+		}
+
+		h2 {
+			font-family: Prompt;
+			font-style: bold;
+			font-size: 105px;
+			text-align: left;
+			font-weight: 800;
+		}
+
+		h1 {
+			font-family: Prompt;
+			font-style: bold;
+			line-height: 1;
+			font-size: 105px;
+			text-align: left;
+			word-spacing: none;
+			font-weight: 800;
+		}
+
+		.btn {
+			right: 0;
+		}
+
+        .qrcontainer{
+            justify-content: center;
+            display: block;
+            position: relative;
+            top: 0;
+            align-items: center;
+            text-align: center;
+            margin: 0px 750px 0px 0px;
+            width: 1500px;
+            max-width: auto;
+
+        }
+
+        .textQr{
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            margin-right: 500px;
+        }
+
+        img{
+            width:500px;
+            height:500px;
+            align-items: center;
+            text-align: center;
+ 
+
+        }
+        h3{
+            margin-top: 150px;
+            text-align: center;
+      /*      margin-left: 550px;*/
+        }
+
+
+
+
+        @media screen and (max-width: 770px){
+/*		    img{
+				margin-left:0px;
+				
+			}
+            h3{
+            font-size: 55px;
+            margin-left: 0;
+            
+            }
+		}*/
+		@media screen and (max-width: 850px){
+/*		    img{
+			margin-left: 10px;
+			margin-bottom: 100px;
+            
+			
+			}
+            h3{
+            margin-left:0;
+            margin-bottom: 50px;*/
+        }
+		@media screen and (min-width: 300px){
+/*			img{
+			margin-left: 0;	
+		}	
+            h3{
+            margin-left: 0;
+            font-size: 34px;
+        }
+
+    
+		}
+		}	*/
+
+    
+        @media screen and (max-width: 997px){
+
+        .navbar-nav button{
+
+            position: relative;
+            display:inline-block;
+            padding: 1rem 1.2rem;
+
+        }
+
+        h1{
+            font-size: 55px;
+            color: #4D9CEC;
+            margin-top: -15px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            font-size: 55px;
+            margin-top: -65px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+
+        @media screen and (mix-width: 525px){
+
+        .navbar-nav button{
+
+            position: relative;
+            display:inline-block;
+            padding: 1rem 1.2rem;
+
+        }
+        h1{
+            font-size: 60px;
+            color: #4D9CEC;
+            margin-top: -15px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            font-size: 60px;
+            margin-top: -65px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+
+        @media screen and (min-width: 570px){
+        .navbar-nav button{
+
+            position: relative;
+            display:inline-block;
+            padding: 1rem 1.2rem;
+
+        }
+
+        h1{
+            font-size: 70px;
+            color: #4D9CEC;
+            margin-top: -15px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            font-size: 70px;
+            margin-top: -65px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+
+
+        @media screen and (min-width: 600px){
+
+        .navbar-nav button{
+
+            position: relative;
+            display:inline-block;
+            padding: 1rem 1.2rem;
+
+        }
+
+        h1{
+            font-size: 75px;
+            color: #fff;
+            margin-top: -15px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            font-size: 75px;
+            margin-top: -65px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+
+        @media screen and (min-width: 800px){
+
+        .navbar-nav button{
+
+            position: relative;
+            display:inline-block;
+            padding: 1rem 1.2rem;
+
+        }
+
+        h1{
+            font-size: 85px;
+            color: #fff;
+            margin-top: -15px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            color: #fff;
+            font-size: 85px;
+            margin-top: -65px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+
+        @media screen and (min-width: 900px){
+
+        h1{
+            font-size: 95px;
+            color: #fff;
+            margin-top: -25px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            color: #fff;
+            font-size: 95px;
+            margin-top: 05px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+
+        @media screen and (min-width: 990px){
+        .navbar-links li {
+            display: show;
+        }		
+
+        .navbar-nav button {
+            display: none;
+        }		
+
+        .navbar-nav .btn{
+            display: none;
+
+        }
+
+        h1{
+            font-size: 105px;
+            color: #fff;
+            margin-top: -25px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            color: #fff;
+            font-size: 105px;
+            margin-top: 05px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+        @media screen and (min-width: 1070px){
+        .navbar-links li {
+            display: show;
+        }		
+
+        .navbar-nav button {
+
+        }		
+
+        .navbar-nav .btn{
+
+        }
+
+        .wtbl{
+            margin-top: 220px;
+
+        }
+
+        h1{
+            font-size: 105px;
+            color: #fff;
+            margin-top: -25px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        h2{
+            color: #fff;
+            font-size: 105px;
+            margin-top: 05px;
+            margin-right: 50px;
+            text-align: center;
+        }
+        }
+
+
+        @media screen and (min-width: 1224){
+
+        .navbar-nav button{
+
+            position: absolute;
+            display:inline-block;
+            padding: 1rem 1.2rem;
+            margin-top: -27px;
+
+
+        }
+
+        .navbar-links li {
+            display: show;
+        }		
+
+
+        .navbar-nav .btn{
+            display: block;
+
+        }
+
+        .wtbl{
+            margin-top: 220px;
+            margin-left: 90px;
+            height: 400px;
+        }
+
+        h2 {
+            color: #353536;
+            font-family: Prompt;
+            font-style: bold;
+            font-size: 105px;
+            text-align: left;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-family: Prompt;
+            font-style: bold;
+            line-height: 1;
+            font-size: 105px;
+            text-align: left;
+            word-spacing: none;
+            font-weight: 800;
+        }
+        }
+
+        @media screen and (min-width: 1226px){
+
+        .navbar-nav button{
+
+            position: absolute;
+            display:inline-block;
+            padding: 1rem 1.2rem;
+            margin-top: -27px;
+
+
+        }
+
+        .navbar-links li {
+            display: show;
+        }		
+
+
+        .navbar-nav .btn{
+            display: block;
+
+        }
+
+        .wtbl{
+            margin-top: 220px;
+            margin-left: 90px;
+            height: 400px;
+        }
+
+        h2 {
+            color: #353536;
+            font-family: Prompt;
+            font-style: bold;
+            font-size: 105px;
+            text-align: left;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-family: Prompt;
+            font-style: bold;
+            line-height: 1;
+            font-size: 105px;
+            text-align: left;
+            word-spacing: none;
+            font-weight: 800;
+        }
+        }
+
+        @media screen and (min-width: 1250px){
+
+        .navbar-links li {
+            display: show;
+        }		
+
+        .navbar-nav button {
+
+        }		
+
+        .navbar-nav .btn{
+            display: block;
+
+        }
+
+        .wtbl{
+            margin-top: 220px;
+            margin-left: 90px;
+            height: 400px;
+        }
+
+        h2 {
+            font-family: Prompt;
+            font-style: bold;
+            font-size: 105px;
+            text-align: left;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-family: Prompt;
+            font-style: bold;
+            line-height: 1;
+            font-size: 105px;
+            text-align: left;
+            word-spacing: none;
+            font-weight: 800;
+        }
+        }
+
+
+        @media screen and (min-width: 1350px){
+
+        .wtbl{
+            margin-top: 220px;
+            margin-left: 90px;
+            height: 400px;
+        }
+
+        h2 {
+            color: #353536;
+            font-family: Prompt;
+            font-style: bold;
+            font-size: 105px;
+            text-align: left;
+            font-weight: 800;
+        }
+
+        h1 {
+            color: #353536;
+            font-family: Prompt;
+            font-style: bold;
+            line-height: 1;
+            font-size: 105px;
+            text-align: left;
+            word-spacing: none;
+            font-weight: 800;
+        }
+        }
+
+
+</style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Blurred Background -->
+    <div class="background-1"></div>
+
+
+
+    <section>
+        <div class="qrcontainer">
+            <div id="textQr">
+                <center><h3>User May Scan the Qr Code below for Donating to Barking Lot!</h3>
+                </center>
+                <br><br>
+                <img src="./img/qrcode_29361206_.png" alt="">
+            </div>
+        </div>
+            <br>
+    <br>
+    </section>
+
+  <!--preloader time duration adjustment-->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/H8vh29F1Ozs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/H8vh29F1Ozs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+    <!--preloader javascript-->
+  <script>
+    //preloader javascript
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load",function(){
+      loader.style.display="none";
+
+    })
+  </script> 
+
+  <!-- jQuery | JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Bootstrap | JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Lonicons | Icons | JS -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Popper | Dropdowns, Popovers, or Tooltips | JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mP  X5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+</body>

@@ -1,0 +1,377 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*/
+	*{
+	    padding: 0;
+	    margin: 0;
+	    box-sizing: border-box;
+	}
+
+		html {
+		  overflow-x: hidden;
+		  scroll-behavior: smooth;
+		  scroll-padding-top: 4rem;
+		}
+
+
+		html::-webkit-scrollbar {
+		  width: 1rem;
+		  z-index: 1000;
+		}
+
+		html::-webkit-scrollbar-track {
+		  background: transparent;
+		  z-index: 1000;
+		}
+
+		html::-webkit-scrollbar-thumb {
+		  background: #262F3D;
+		  z-index: 1000;
+		 /* border-radius: 5rem;*/
+		}
+
+	body{
+	    font-family: 'Poppins', sans-serif;
+	}
+
+	img{
+	    width: 100%;
+	    display: block;
+	}
+
+	.main-wrapper{
+	    background-color: #fff;
+	    min-height: 100vh;
+	    overflow-x: 0;
+	}
+
+	.container_marketplace{
+	    max-width: 1200px;
+	    margin: 30px auto;
+	    padding: 100px 16px;
+	}
+
+	.main-title{
+	    text-align: center;
+	}
+
+	.main-title h1{
+	    padding: 16px 0;
+	    font-weight: 500;
+	    text-transform: uppercase;
+	    letter-spacing: 1.5px;
+	   	font-size: 50px;
+	   	font-family: "Poppins";
+	   	text-align: center;
+	}
+
+	/* marketplace page hidden*/
+		/*	visiblity: hidden; /*take out some space*/
+/*
+	#marketplace_page1_hidden{
+		display: none;
+
+	}
+
+	#marketplace_page2_hidden{
+		display: none;
+	}
+
+	#marketplace_page3_hidden{
+		display: none;
+
+	}
+
+	#marketplace_page4_hidden{
+		display: none;
+
+	}
+
+	#marketplace_page5_hidden{
+		display: none;
+
+	}*/
+/*
+	.hiddenpages {
+	  display: none;
+	 }
+
+	.visiblepage {
+	  display: block;
+	   }*/
+
+	/* button group page marketplace*/
+
+	#cart_count{
+/*		text-align: center;
+		padding: 0 0.9rem 1rem 0.9rem;
+		border-radius: 3rem;*/
+
+	}
+
+	.button_marketplace-group-page{
+		text-align: center;
+		justify-content: center;
+		display: inline-flex;
+		border: 2px solid black;
+		border-radius: 4px;
+		overflow: hidden;
+		width: 78px;
+		max-width: auto;
+		left: 100%;
+
+		position: relative;
+
+	}
+
+	.button_marketplace{
+		padding: 10px 15px;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		border-right: 1px solid black;
+		background: #eeeeee;
+		font-color: #fff;
+		transition: 0.2s;
+	}
+
+	.button_marketplace::last-child{
+		border-right: none;
+	}
+
+	.button_marketplace:hover{
+		background: black;
+		color: #fff;
+
+	}
+
+	.display-style-btns{
+	    margin: 10px 0;
+	    display: flex;
+	    align-items: center;
+	    justify-content: flex-end;
+	    background-color: #fff;
+	    padding: 16px 0;
+	    border-radius: 5px;
+	}
+
+	.display-style-btns button{
+	    border: none;
+	    font-size: 22px;
+	    display: inline-block;
+	    vertical-align: top;
+	    margin: 0 8px;
+	    background-color: transparent;
+	    cursor: pointer;
+	    transition: all 0.3s ease-out;
+	}
+
+	.display-style-btns button:hover{
+	    color: #f79410;
+	}
+
+
+	.display-style-btns2{
+	    margin: 10px 0;
+	    display: flex;
+	    align-items: center;
+	    justify-content: flex-end;
+	    background-color: #fff;
+	    padding: 16px 0;
+	    border-radius: 5px;
+	}
+
+	.display-style-btns2 button{
+	    border: none;
+	    font-size: 22px;
+	    display: inline-block;
+	    vertical-align: top;
+	    margin: 0 8px;
+	    background-color: transparent;
+	    cursor: pointer;
+	    transition: all 0.3s ease-out;
+	}
+
+	.display-style-btns2 button:hover{
+	    color: #f79410;
+	}
+
+	.active-btn{
+	    color: #f79410;
+	}
+
+
+	.item-list{
+	    margin: 36px 0;
+	    display: grid;
+	    grid-template-columns: repeat(1, 1fr);
+	    row-gap: 32px;
+	}
+
+	.item{
+/*	    background-color: #fff;*/
+	    border-radius: 5px;
+/*	    overflow: hidden;*/
+	    box-shadow: 0 0 4px 0 rgba(15, 4, 4, 0.05);
+	    transition: all 0.2s ease-out;
+	}
+
+	.item:hover{
+	    box-shadow: 0 0 10px 1px rgba(0, 4, 4, 0.15);
+	}
+
+	.item-img{
+	    position: relative;
+	    overflow: hidden;
+	}
+
+	.item-img img{
+	    width: 70%;
+	    margin: 16px auto;
+	}
+
+	.icon-list{
+	    position: absolute;
+	    bottom: -100px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    transition: all 0.3s ease-out;
+	}
+
+	.icon-list button{
+	    border: none;
+	    background-color: #202020;
+	    color: #fff;
+	    margin: 0 6px;
+	    width: 35px;
+	    height: 35px;
+	    border-radius: 50%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    font-size: 15px;
+	    cursor: pointer;
+	    transition: all 0.3s ease-out;
+	}
+
+	.icon-list button:hover{
+	    background-color: #f4f4f4;
+	    color: #202020;
+	}
+
+	.item-img:hover .icon-list{
+	    bottom: 26px;
+	}
+
+	.item-detail{
+	    padding: 16px;
+	    color: #202020;
+	    text-align: center;
+	}
+
+	.item-name{
+	    font-weight: 500;
+	    font-size: 18px;
+	    color: #202020;
+	    display: block;
+	}
+
+	.item-price{
+	    margin: 10px 0;
+	    font-weight: 300;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+
+	.old-price{
+	    text-decoration: line-through;
+	    opacity: 0.6;
+	}
+
+	.new-price{
+	    color: #51a3f0;
+	    font-size: 18px;
+	    font-weight: 600;
+	    margin-right: 10px;
+	}
+
+	.item-detail p{
+	    font-weight: 300;
+	    opacity: 0.9;
+	    font-size: 15px;
+	    line-height: 1.7;
+	    display: none;
+	}
+
+	.add-btn{
+	    margin: 16px 0;
+	    text-transform: uppercase;
+	    border: none;
+	    border-radius: 50px;
+	    background-color: #202020;
+	    color: #fff;
+	    font-family: inherit;
+	    padding: 10px 28px;
+	    border: 1px solid #202020;
+	    cursor: pointer;
+	    transition: all 0.3s ease-out;
+	    display: none;
+	}
+
+	.add-btn:hover{
+	    background-color: #fff;
+	    color: #202020;
+	}
+
+
+	/* stylings for details active */
+
+	.details-active.item-list{
+	    grid-template-columns: 100%;
+	}
+
+	.details-active .item{
+	    display: grid;
+	    grid-template-columns: repeat(2, 1fr);
+	    align-items: center;
+	}
+
+	.details-active .item-detail{
+	    text-align: left;
+	}
+
+	.details-active .item-price{
+	    justify-content: flex-start;
+	}
+
+	.details-active .item-detail p{
+	    display: block;
+	}
+
+	.details-active .item-detail .add-btn{
+	    display: block;
+	}
+
+
+	/*rspv*/
+	@media screen and (min-width: 678px){
+	    .item-list{
+	        grid-template-columns: repeat(2, 1fr);
+	        gap: 32px;
+	    }
+	}
+
+	@media screen and (min-width: 768px){
+	    .item-list{
+	        grid-template-columns: repeat(3, 1fr);
+	    }
+	}
+
+	@media screen and (max-width: 576px){
+	    .details-active .item{
+	        grid-template-columns: 100%;
+	    }
+	}

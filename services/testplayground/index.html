@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<style type="text/css">
+	   .hidden {
+	        display: none;
+	   }
+	   .visible {
+	        display: block;
+	   }
+	</style>
+
+	<button id="RenderPortfolio_Btn">View Portfolio</button>
+    <button id="RenderResults_Btn">View Results</button>
+
+	<div class="visible" id="portfolio">
+		<div>
+	    	div1
+	    </div>
+	</div>
+
+	<div class="hidden" id="results">
+	    <span>div2</span>
+	</div>
+
+	<script type="text/javascript">
+
+    var portfolioDiv = document.getElementById('portfolio');
+    var resultsDiv = document.getElementById('results');
+
+    var portfolioBtn = document.getElementById('RenderPortfolio_Btn');
+    var resultsBtn = document.getElementById('RenderResults_Btn');
+
+    portfolioBtn.onclick = function() {
+        resultsDiv.setAttribute('class', 'hidden');
+        portfolioDiv.setAttribute('class', 'visible');
+    };
+
+    resultsBtn.onclick = function() {
+        portfolioDiv.setAttribute('class', 'hidden');
+        resultsDiv.setAttribute('class', 'visible');
+    };
+
+	</script>
+
+</body>
+</html>
