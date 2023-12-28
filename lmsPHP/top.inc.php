@@ -23,6 +23,26 @@ if(!isset($_SESSION['ROLE'])){
       <link rel="stylesheet" href="assets/css/style.css">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
    </head>
+   <style>
+   .navbar_header {
+      display: flex;
+      align-items: left;
+      justify-content: left; /* Add this line to horizontally align the content */
+      padding-top: 0px; /* Adjust the padding top value as per your requirement */
+      padding-bottom: 55px; /* Adjust the padding bottom value as per your requirement */
+      width: 250px;
+   }
+   
+   .navbar_header img {
+      margin-top: -8.5px; /* Adjust the margin top value as per your requirement */
+   }
+
+
+
+   .menutoggle{
+      margin-bottom: 35px;
+   }
+   </style>
    <body>
       <aside id="left-panel" class="left-panel">
          <nav class="navbar navbar-expand-sm navbar-default">
@@ -59,7 +79,7 @@ if(!isset($_SESSION['ROLE'])){
       <div id="right-panel" class="right-panel">
          <header id="header" class="header">
             <div class="top-left">
-               <div class="navbar-header">
+               <div class="navbar_header">
                   <a class="navbar-brand" href="index.php"><img src="images/BLPAAS.png" alt="Logo"></a>
                   <a class="navbar-brand hidden" href="index.php"><img src="images/BLPAAS2.png" alt="Logo"></a>
 
