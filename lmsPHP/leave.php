@@ -41,7 +41,7 @@ $res=mysqli_query($con,$sql);
                                        <th width="14%">Request Date</th>
 									   <th width="14%">Dog Name</th>
 									   <th width="15%">Reason</th>
-									   <th width="18%">Request Status</th>
+									   <th width="20%">Request Status</th>
 									   <th width="14%">Link</th>
 									   <th width="10%"></th>
                                     </tr>
