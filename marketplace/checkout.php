@@ -111,7 +111,7 @@ if(isset($_POST['checkout'])){
 
                     <!--firstName-->
                     <div class="md-form ">
-                      <input type="text" id="firstName" class="form-control" name="firstName" placeholder="Thum" required>
+                      <input type="text" id="firstName" class="form-control" name="firstName" placeholder="Daniel" required>
                       <label for="firstName" class="">First name <b class="text-danger">*</b></label>
                     </div>
   
@@ -123,7 +123,7 @@ if(isset($_POST['checkout'])){
   
                     <!--lastName-->
                     <div class="md-form">
-                      <input type="text" id="lastName" class="form-control" name="lastName" placeholder="Yong Hui" required>
+                      <input type="text" id="lastName" class="form-control" name="lastName" placeholder="Poh Ting Fong" required>
                       <label for="lastName" class="">Last name <b class="text-danger">*</b></label>
                     </div>
   
